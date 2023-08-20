@@ -15,6 +15,11 @@
 <li> Autor: {{publicacion.autor}}</li> 
 <br>                   
 <li> Fecha: {{publicacion.fecha}} </li>
+<br>
+{% if user.id == publicacion.usuario.id %}
+<a href="{% url 'EliminarPublicacion' publicacion.titulo %}"> Eliminar </a> 
+<a href="{% url 'EditarPublicacion' publicacion.titulo %}"> Editar </a> 
+{% endif %}
 
 
 {% endblock %}

@@ -10,6 +10,9 @@ urlpatterns = [
     path('publicaciones', publicaciones, name='Publicaciones'),
     path('pubFormulario', pubFormulario, name='PubFormulario'),
     path('verPublicacion/<int:pk>', verPublicacion.as_view(), name='VerPublicacion'),
+    path('eliminar/<pTitulo>', eliminarPublicacion, name='EliminarPublicacion'),
+    path('editar/<pTitulo>', editarPublicacion, name='EditarPublicacion'),
+
 
     
 ]

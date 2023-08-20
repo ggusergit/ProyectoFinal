@@ -26,12 +26,22 @@
 				</div>
 				<nav>
 					<ul>
+						{% if request.user.is_authenticated %}
+                        
+                        <li> <a href="{% url 'EditarPerfil' %}"> editar perfil - {{user.username}}</a></li>
+                        {% endif %}
 						<li><a href="{% url 'Inicio' %}">Inicio</a></li>
 						<li><a href="{% url 'Publicaciones' %}">Publicaciones</a></li>
 						<li><a href="{% url 'Sobremi' %}">Sobre mi</a></li>
 						<!-- <li><a href="contact.html">Contact</a></li> -->
+						{% if not request.user.is_authenticated %}
 						<li><a href="{% url 'Login' %}">Login</a></li>
-					</ul>
+						{% endif %}
+						{% if request.user.is_authenticated %}
+                        
+                        <li><a href="{% url 'Logout' %}"> Cerrar Sesion</a></li>
+                        {% endif %}
+					</ul> 
 				</nav>
 			</header>
 			
