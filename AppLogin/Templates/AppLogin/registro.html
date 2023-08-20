@@ -1,0 +1,17 @@
+{% extends 'AppLogin/padre.html' %}
+
+{% load static %}
+
+{% block loquecambia %}
+  
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <br>
+
+        <button type="submit" style="padding: 3px;"> <b> Crear usuario </b></button>
+    </form>
+    
+
+{% endblock %}

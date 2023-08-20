@@ -1,0 +1,25 @@
+{% extends 'AppLogin/padre.html' %}
+
+{% load static %}
+
+{% block loquecambia %}
+
+    <h1 style="color: #B82924; text-align: center;"> Crear Publicacion</h1>
+    <br>
+    {% if miFormulario.errors %}
+        <p style="color: red;"> Están mal los datos, revisar</p>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+        <!-- Acá van los elementos de django-->
+
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+        <br>
+        <input type="submit" value=" Publicar " style="position: absolute; left: 25%;">
+    </form>
+    
+
+{% endblock %}

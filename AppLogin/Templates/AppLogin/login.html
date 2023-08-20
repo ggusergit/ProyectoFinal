@@ -3,7 +3,18 @@
 {% load static %}
 
 {% block loquecambia %}
-  aca hacemos el login
+  
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <br>
+
+        <button type="submit" style="padding: 3px; position: relative; left: 10%;"> <b> Iniciar Sesión </b></button>
+    </form>
+    <br>
+    <br>
+    ¿No tenes usuario? <a href="{% url 'Registro' %}"> <b> Registrarse </b></a>
     
 
 {% endblock %}

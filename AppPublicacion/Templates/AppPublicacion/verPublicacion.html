@@ -1,0 +1,20 @@
+{% extends 'AppLogin/padre.html' %}
+
+{% load static %}
+
+{% block loquecambia %}
+
+<li> <h1 class="center" style="color: #B82924;">{{publicacion.titulo}}</h1> </li>
+<li> <h2>{{publicacion.subtitulo}}</h2> </li>
+<br>
+<img height="350px" src={{publicacion.imagen.url}}>
+<br>
+<br>
+<li> <p style="font-size:large; font-family: Verdana, Geneva, Tahoma, sans-serif;">{{publicacion.cuerpo}} </p></li>  
+<br>                  
+<li> Autor: {{publicacion.autor}}</li> 
+<br>                   
+<li> Fecha: {{publicacion.fecha}} </li>
+
+
+{% endblock %}

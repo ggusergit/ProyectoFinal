@@ -3,8 +3,11 @@ from django.urls import path
 from AppLogin.views import *
 
 urlpatterns = [
-    path('', inicio, name='Inicio'),
-    path('login', login, name='Login'),
-    path('sobremi', sobre_mi, name='Sobremi'),
+    path('login', login_user, name='Login'),
+    path('login_ok', login_ok, name='LoginOk'),
+    path('registro', register, name="Registro"),
+    
+    
+
 
 ]
