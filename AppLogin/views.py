@@ -30,7 +30,7 @@ def login_user(request):
            
         else:
 
-            return render(request, "AppLogin/login_ok.html", {"mensaje":"Formulario erroneo"})
+            return render(request, "AppLogin/login_ok.html", {"mensaje":"Usuario o clave incorrecto, reintente"})
 
     form = AuthenticationForm()
 
